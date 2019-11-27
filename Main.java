@@ -22,6 +22,10 @@ class Bird extends Animal {
     void sing(){
         System.out.println("I am Singing");
     }
+    
+    void say(){
+        System.out.println(this.getClass().getSimpleName() + " says " + this.voice);
+    }
 }
 
 
@@ -32,9 +36,6 @@ class Duck extends Bird {
         super(voice);
     }
 
-    void say(){
-        System.out.println("Duck Says" + super.voice);   
-    }
 
     void swim(){
         System.out.println("I am swimming");
@@ -47,12 +48,15 @@ class Chicken extends Bird {
         super(voice);
     }
 
-    void say(){
-        System.out.println("Chicken Says" + super.voice);   
-    }
-
     void fly(){
         System.out.println("I can't able to fly");
+    }
+}
+
+class Rooster extends Chicken {
+
+    public Rooster(String voice){
+        super(voice);
     }
 }
 
@@ -73,5 +77,9 @@ public class Solution {
         Chicken chicken = new Chicken("Cluck, cluck");
         chicken.say();
         chicken.fly();
+        
+        // rooster
+        Rooster roster = new Rooster("Cock-a-doodle-doo");
+        roster.say();
     }
 }
