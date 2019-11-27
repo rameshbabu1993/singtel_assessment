@@ -11,7 +11,7 @@ class Animal {
 
 class Bird extends Animal {
 
-    String voice = ""; 
+    String voice = "nothing"; 
 
     public Bird(){};
 
@@ -124,6 +124,25 @@ class Dolphins extends Fish {
 
 }
 
+class Butterfly extends Bird {
+
+    public Butterfly(){}
+
+    void sing(){
+        System.out.println(this.getClass().getSimpleName() + " Cant able to make sound");
+    }
+
+}
+
+class Caterpillar extends Bird {
+
+    public Caterpillar(){}
+
+    void fly(){
+        System.out.println(this.getClass().getSimpleName() + " Cant able to fly");
+    }
+
+}
 
 public class Solution {
     public static void main(String[] args) {
@@ -178,5 +197,15 @@ public class Solution {
         Dolphins dolphins = new Dolphins("are beautifull", "help others");
         dolphins.howItLook();
         dolphins.does();
+
+        // Butterfly
+        Butterfly butterfly = new Butterfly();
+        butterfly.fly();
+        butterfly.sing();
+
+        // caterpillar
+        Caterpillar caterpillar = new Caterpillar();
+        caterpillar.fly();
+        caterpillar.walk();
     }
 }
