@@ -60,6 +60,13 @@ class Rooster extends Chicken {
     }
 }
 
+class Parrot extends Bird {
+
+    public Parrot(String voice){
+        super(voice);
+    }
+}
+
 
 public class Solution {
     public static void main(String[] args) {
@@ -81,5 +88,17 @@ public class Solution {
         // rooster
         Rooster roster = new Rooster("Cock-a-doodle-doo");
         roster.say();
+
+        // Parrot with dog
+        Parrot parrot = new Parrot("Woof, woof with a dog ");
+        parrot.say();
+
+        // parrot with cat
+        Parrot cat_parrot = new Parrot("Meow with a Meow "); 
+        cat_parrot.say();
+
+        // parrot with cat
+        Parrot rooster_parrot = new Parrot("Cock-a-doodle-doo with a rooster"); 
+        rooster_parrot.say();
     }
 }
